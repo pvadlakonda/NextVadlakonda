@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
 
-You can use the [editor on GitHub](https://github.com/pvadlakonda/NextVadlakonda/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+    <title>Who's the next Vadlakondas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <script src="timer.js"></script>
+</head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<body>
+    <div class="container text-center" style="background:grey">
+        <h3>Almost there </h3>
+        <h2 id="demo"></h2>
+    </div>
+    <div class="container">
+        <h3>Meanwhile, what's your guess</h3>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-check-input" id="name" placeholder="Your Name" name="name">
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="gender" id="Boy" value="boy"> Boy
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="gender" id="Girl" value="girl"> Girl
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="babyName">Baby Name Suggestion:</label>
+                <input type="text" class="form-check-input" id="babyName" placeholder="Suggest a baby name" name="babyName">
+            </div>
+            <button type="button" onclick="submitData()" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <div class="table-responsive" style="margin-top: 20px">
+        <table id="table" class="table hidden">
+            <tr>
+                <th>Name</th>
+                <th>Selection</th>
+                <th>Name Suggestion</th>
+            </tr>
+        </table>
+    </div>
+</body>
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pvadlakonda/NextVadlakonda/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</html>
