@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="canvasjs.js"></script>
     <script src="index.js"></script>
     <script src="timer.js"></script>
 </head>
@@ -24,21 +25,23 @@
                 <input type="text" class="form-check-input" id="name" placeholder="Your Name" name="name">
             </div>
             <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="gender" id="Boy" value="Boy"> Boy
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Boy" value="Boy"> Boy
                 </label>
             </div>
             <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="gender" id="Girl" value="Girl"> Girl
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="Girl" value="Girl"> Girl
                 </label>
             </div>
             <div class="form-group">
-                <input type="text" class="form-check-input" id="babyName" placeholder="Do you have a baby name suggestion" name="babyName">
+                <input type="text" class="form-check-input" id="babyName" placeholder="Baby Name Suggestion" name="babyName">
             </div>
             <button type="button" onclick="submitData()" class="btn btn-default">Submit</button>
+            <button type="reset" class="btn btn-default">Clear</button>
         </form>
     </div>
+    <div id="chartContainer" style="height: 300px; width: 100%; margin-top: 20px"></div>
     <div class="table-responsive" style="margin-top: 20px">
         <table id="table" class="table hidden">
             <tr>
