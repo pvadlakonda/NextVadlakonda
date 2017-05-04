@@ -19,7 +19,6 @@ function submitData() {
     var gender = $("input[name='gender']:checked").val();
     var suggestedName = $("#babyName").val();
     if (invalidData(name, gender)) {
-        alert("Enter you name and select a gender, please!!");
         return;
     }
     $.ajax({
@@ -34,7 +33,16 @@ function submitData() {
 }
 
 function invalidData(name, gender) {
-    if (name === "" || gender === undefined) {
+    if (name === "" && gender === undefined) {
+        alert("Enter you name and select a gender, please!!");
+        return true;
+    }
+    if (name === "") {
+        alert("Enter you name, please!!");
+        return true;
+    }
+    if (gender === undefined) {
+        alert("Select a gender, please!!");
         return true;
     }
     return false;
@@ -44,7 +52,7 @@ function populateChart(boyCount, girlCount) {
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
             text: "What dear ones think so far",
-            fontFamily: "arial black"
+            fontFamily: "arial"
         },
         animationEnabled: true,
         legend: {
@@ -54,19 +62,19 @@ function populateChart(boyCount, girlCount) {
         theme: "theme1",
         data: [{
             type: "pie",
-            indexLabelFontFamily: "Garamond",
+            indexLabelFontFamily: "arial",
             indexLabelFontSize: 20,
-            indexLabelFontWeight: "bold",
+            // indexLabelFontWeight: "bold",
             startAngle: 0,
-            indexLabelFontColor: "MistyRose",
+            indexLabelFontColor: "green",
             indexLabelLineColor: "darkgrey",
             indexLabelPlacement: "inside",
             toolTipContent: "{name}: {y}",
             showInLegend: true,
-            indexLabel: "#percent%",
+            indexLabel: "{y}",
             dataPoints: [
-                { y: boyCount, name: "Boy", legendMarkerType: "triangle" },
-                { y: girlCount, name: "Girl", legendMarkerType: "circle" }
+                { y: boyCount, name: "Boy", color: "skyblue" },
+                { y: girlCount, name: "Girl", color: "hotpink" }
             ]
         }]
     });
