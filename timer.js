@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("May 4, 2017 02:04:00").getTime();
+var countDownDate = new Date("May 6, 2017 20:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -23,7 +23,10 @@ var x = setInterval(function() {
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timerContainer").innerHTML = "<h1>IT'S A BOY !!!</h1>";
+        document.getElementById("timerContainer").innerHTML = "<h1>IT'S A GIRL !!!</h1>";
         document.getElementById("mainTimerContainer").style.backgroundColor = 'hotpink';
+
+        // document.getElementById("timerContainer").innerHTML = "<h1>IT'S A BOY !!!</h1>";
+        // document.getElementById("mainTimerContainer").style.backgroundColor = 'skyblue';
     }
 }, 1000);
