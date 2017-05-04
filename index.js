@@ -1,54 +1,71 @@
-
-$(document).ready(function () {
+$(document).ready(function() {
     console.log("ready!");
-    populateTable(retrieveLocalStorage());
+    populateTable(retrieveData());
 });
 
-function retrieveLocalStorage() {
-    var retrievedData = localStorage.getItem('storedComments');
-    var responses = JSON.parse(retrievedData);
-    if (responses == null) {
-        responses = praveenResponse;
-    }
+function retrieveData() {
+    var responses;
+    $.ajax({
+        dataType: "json",
+        type: "GET",
+        url: "https://api.mlab.com/api/1/databases/vadlakonda/collections/comments?apiKey=2-byIVNo-oqo6Irfu3ywY1OkJW8GY_xh",
+        success: function(data) {
+            responses = data;
+        }
+    });
     return responses;
 }
 
 function submitData() {
-    var responses = retrieveLocalStorage();
-    responses.comments.push({
-        "name": $("#name").val(),
-        "gender": $("input[name='gender']:checked").val(),
-        "suggestedName": $("#babyName").val()
+    var name = $("#name").val();
+    var gender = $("input[name='gender']:checked").val();
+    var suggestedName = $("#babyName").val();
+    if (invalidData(name, gender)) {
+        alert("Enter you name and select a gender, please!!");
+        return;
+    }
+    $.ajax({
+        url: "https://api.mlab.com/api/1/databases/vadlakonda/collections/comments?apiKey=2-byIVNo-oqo6Irfu3ywY1OkJW8GY_xh",
+        data: JSON.stringify({ "name": name, "gender": gender, "suggestedName": suggestedName }),
+        type: "POST",
+        contentType: "application/json"
     });
-
-    $('#myForm').find('input:text').val('');
-    //$('input:radio').removeAttr('checked');
-    populateTable(responses);
-
-    saveToLocalStorage(responses);
+    populateTable(retrieveData());
 }
-function saveToLocalStorage(storedComments) {
-    localStorage.setItem('storedComments', JSON.stringify(storedComments));
+
+function invalidData(name, gender) {
+    if (name === "" || gender === undefined) {
+        return true;
+    }
+    return false;
 }
 
 function populateTable(data) {
     if (data) {
-        var len = data.comments.length;
+        var len = data.length;
 
         if (len > 0) {
             clearTable();
             for (var i = 0; i < len; i++) {
                 var txt = "";
-                var comment = data.comments[i];
+                var comment = data[i];
                 if (comment.name && comment.gender) {
                     txt = "<tr><td>" + comment.name + "</td><td>" + comment.gender + "</td><td>" + comment.suggestedName + "</td></tr>";
                 }
-                if (txt != "") {
+                if (txt !== "") {
                     $("#table").append(txt).removeClass("hidden");
                 }
             }
         }
     }
+    clearFields();
+}
+
+function clearFields() {
+    $("input[type=text], textarea").val("");
+    $('input[type=radio]').each(function() {
+        $(this).prop('checked', false);
+    });
 }
 
 function clearTable() {
@@ -57,12 +74,4 @@ function clearTable() {
     for (var x = rowCount - 1; x > 0; x--) {
         myTable.deleteRow(x);
     }
-}
-
-var praveenResponse = {
-    "comments": [{
-        "name": "praveen",
-        "gender": "Boy",
-        "suggestedName": "Sachin"
-    }]
 }
