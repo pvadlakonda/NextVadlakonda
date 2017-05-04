@@ -29,11 +29,11 @@
                 <input type="text" class="form-check-input" id="name" placeholder="Your Name" name="name" style="width: 250px">
             </div>
             <div class="form-check form-check-inline" style="margin-top: 10px">
-                <label class="form-check-inline">
+                <label class="form-check-inline btn btn-outline-primary">
                     <input class="form-check-input" type="radio" name="gender" value="Boy"> Boy
                     <img style="width: 80px; height: 60px" src="wheels.png">
                 </label>
-                <label class="form-check-inline" style="margin-left: 20px">
+                <label class="form-check-inline btn btn-outline-primary" style="margin-left: 20px">
                     <input class="form-check-input" type="radio" name="gender" value="Girl"> Girl
                     <img style="width: 80px; height: 60px" src="heels.png">
                 </label>
