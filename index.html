@@ -16,6 +16,7 @@
 <body>
     <div class="container text-center" id="mainTimerContainer" style="background:LightSlateGrey ">
         <h3>Who's the next Vadlakonda</h3>
+        <h2>Is it a boy... Is it a girl...</h2>
         <div class="container text-center" id="timerContainer">
             <h3>will know in</h3>
             <h2 id="timer"></h2>
@@ -40,8 +41,8 @@
             <div class="form-group" style="margin-top: 10px">
                 <input type="text" class="form-check-input" id="babyName" placeholder="Baby Name Suggestion" name="babyName" style="width: 250px">
             </div>
-            <button type="button" onclick="submitData()" class="btn btn-outline-primary" style="margin-top: 10px">Submit</button>
-            <button type="reset" class="btn btn-outline-primary" style="margin-top: 10px; margin-left: 10px">Clear</button>
+            <button type="button" onclick="submitData()" class="btn btn-primary" style="margin-top: 10px">Submit</button>
+            <button type="reset" class="btn btn-primary" style="margin-top: 10px; margin-left: 10px">Clear</button>
         </form>
     </div>
     <div id="chartContainer" style="height: 300px; width: 100%; margin-top: 20px"></div>
