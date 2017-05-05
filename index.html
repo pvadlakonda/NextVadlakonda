@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container text-center" id="mainTimerContainer" style="background:grey ">
+    <div class="container text-center" id="mainTimerContainer" style="background:#9c8265 ">
         <div class="container"><img src="ishaan.JPG" style="width: 250px; height: 300px" /></div>
         <!--<h2>If you think I am trouble, wait until you meet my partner in crime </h2>-->
         <h2>Mom thinks its a Girl <br>Dad thinks its a Boy <br>Am gonna be a <br>Big Brother to </h2>
