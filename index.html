@@ -20,9 +20,9 @@
 
 <body>
     <div class="container text-center" id="mainTimerContainer" style="background:grey ">
-        <div class="container"><img src="ishaan.JPG" style="width: 300px; height: 300px" /></div>
+        <div class="container"><img src="ishaan.JPG" style="width: 250px; height: 300px" /></div>
         <!--<h2>If you think I am trouble, wait until you meet my partner in crime </h2>-->
-        <h2>Mom thinks its a girl <br>Dad thinks its a boy <br>Am gonna be a <br>Big Brother to </h2>
+        <h2>Mom thinks its a Girl <br>Dad thinks its a Boy <br>Am gonna be a <br>Big Brother to </h2>
         <div class="container text-center" id="timerContainer">
             <h2><span style="color:hotpink">little sister</span> or <span style="color:skyblue">little brother</span></h2>
             <h3>lets countdown for the hour</h3>
