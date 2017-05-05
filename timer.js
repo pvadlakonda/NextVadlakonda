@@ -23,10 +23,10 @@ var x = setInterval(function() {
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timerContainer").innerHTML = "<h1>IT'S A GIRL !!!</h1>";
+        document.getElementById("timerContainer").innerHTML = "<h1>A LITTLE SISTER !!</h1>";
         document.getElementById("mainTimerContainer").style.backgroundColor = 'hotpink';
 
-        // document.getElementById("timerContainer").innerHTML = "<h1>IT'S A BOY !!!</h1>";
+        // document.getElementById("timerContainer").innerHTML = "<h1>A LITTLE BROTHER</h1>";
         // document.getElementById("mainTimerContainer").style.backgroundColor = 'skyblue';
     }
 }, 1000);

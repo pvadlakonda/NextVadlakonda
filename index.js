@@ -51,8 +51,8 @@ function invalidData(name, gender) {
 function populateChart(boyCount, girlCount) {
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {
-            text: "What dear ones think so far",
-            fontFamily: "arial"
+            text: "",
+            fontFamily: "fantasy"
         },
         animationEnabled: true,
         legend: {
@@ -60,11 +60,11 @@ function populateChart(boyCount, girlCount) {
             horizontalAlign: "center"
         },
         theme: "theme1",
+        toolTip: { enabled: false },
         data: [{
             type: "pie",
-            indexLabelFontFamily: "arial",
+            indexLabelFontFamily: "fantasy",
             indexLabelFontSize: 20,
-            // indexLabelFontWeight: "bold",
             startAngle: 0,
             indexLabelFontColor: "green",
             indexLabelLineColor: "darkgrey",
