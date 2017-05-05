@@ -14,22 +14,77 @@
     <style>
         body {
             font-family: fantasy;
+
+            font: 20px;
+            line-height: 1.8;
+            color: #f5f6f7;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 45px;
+        }
+
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #9c8265;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .container-fluid {
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container text-center" id="mainTimerContainer" style="background:#9c8265 ">
-        <div class="container"><img src="ishaan.JPG" style="width: 250px; height: 300px" /></div>
-        <!--<h2>If you think I am trouble, wait until you meet my partner in crime </h2>-->
-        <h2>Mom thinks its a Girl <br>Dad thinks its a Boy <br>Am gonna be a <br>Big Brother to </h2>
-        <div class="container text-center" id="timerContainer">
-            <h2><span style="color:hotpink">little sister</span> or <span style="color:skyblue">little brother</span></h2>
-            <h3>lets countdown for the hour</h3>
-            <h2 id="timer"></h2>
+
+    <!-- First Container -->
+    <div class="container-fluid bg-3 text-center" id="mainTimerContainer">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="ishaan.JPG" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+            </div>
+            <div class="col-sm-6">
+                <h2>Mom thinks its a Girl <br>Dad thinks its a Boy <br>Am gonna be a <br>Big Brother to </h2>
+                <div class="content text-center" id="timerContainer">
+                    <h2><span style="color:hotpink">little sister</span> or <span style="color:skyblue">little brother</span></h2>
+                    <h3>lets countdown for the hour</h3>
+                    <h2 id="timer"></h2>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container-fluid bg-2 text-center">
+
         <h3>Who do you think</h3>
         <form id="myForm">
             <div class="form-check form-check-inline" style="margin-top: 10px">
@@ -52,16 +107,24 @@
             <button type="reset" class="btn btn-primary" style="margin-top: 10px; margin-left: 10px">Let me come back</button>
         </form>
     </div>
-    <div id="chartContainer" style="height: 300px; width: 100%; margin-top: 20px"></div>
-    <div class="table-responsive" style="margin-top: 20px">
-        <table id="table" class="table hidden">
-            <tr>
-                <th>Name</th>
-                <th>Selection</th>
-                <th>Name Suggestion</th>
-            </tr>
-        </table>
+
+    <div class="container-fluid text-center">
+        <div id="chartContainer" style="height: 300px; width: 100%; margin-top: 20px"></div>
     </div>
+
+    <div class="container-fluid bg-1 text-center">
+        <div class="table-responsive" style="margin: 0px auto; max-width: 800px;">
+            <table id="table" class="table hidden">
+                <tr>
+                    <th>Name</th>
+                    <th>Selection</th>
+                    <th>Name Suggestion</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
