@@ -75,13 +75,11 @@
             <div class="col-sm-6">
                 <img src="ishaan.JPG" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="finalText">
                 <h2>Mom thinks its a Girl <br>Dad thinks its a Boy <br>Am gonna be a <br>Big Brother to </h2>
-                <div class="content text-center" id="timerContainer">
-                    <h2><span style="color:hotpink">little sister</span> or <span style="color:skyblue">little brother</span></h2>
-                    <h3>lets countdown for the hour</h3>
-                    <h2 id="timer"></h2>
-                </div>
+                <h2><span style="color:hotpink">little sister</span> or <span style="color:skyblue">little brother</span></h2>
+                <h3>lets countdown for the hour</h3>
+                <h1 id="timer"></h1>
             </div>
         </div>
     </div>
@@ -126,7 +124,6 @@
             </table>
         </div>
     </div>
-
 
 </body>
 

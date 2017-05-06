@@ -23,10 +23,10 @@ var x = setInterval(function() {
     // If the count down is finished, write some text
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("timerContainer").innerHTML = "<h1>A LITTLE SISTER !!</h1>";
-        document.getElementById("mainTimerContainer").style.backgroundColor = 'hotpink';
+        // document.getElementById("finalText").innerHTML = "<h2><br>Am gonna be a <br>Big Brother <br> to<br><br> </h2><h1><span style='font-size:80px;color:pink'>A LITTLE SISTER !!</span></h1>";
+        // document.getElementById("mainTimerContainer").style.backgroundColor = 'hotpink';
 
-        // document.getElementById("timerContainer").innerHTML = "<h1>A LITTLE BROTHER</h1>";
-        // document.getElementById("mainTimerContainer").style.backgroundColor = 'skyblue';
+        document.getElementById("finalText").innerHTML = "<h2><br>Am gonna be a <br>Big Brother <br> to<br><br> </h2><h1><span style='font-size:80px;color:blue'>A LITTLE BROTHER</span></h1>";
+        document.getElementById("mainTimerContainer").style.backgroundColor = 'skyblue';
     }
 }, 1000);
