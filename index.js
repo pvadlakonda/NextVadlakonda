@@ -19,7 +19,7 @@ function submitData() {
     // var gender = $("input[name='gender']:checked").val();
     var gender = 'Girl'; //voting ended, only option now is girl :)
     var suggestedName = $("#babyName").val();
-    if (invalidData(name, gender)) {
+    if (invalidData(name, gender, suggestedName)) {
         return;
     }
     $.ajax({
@@ -33,17 +33,21 @@ function submitData() {
     });
 }
 
-function invalidData(name, gender) {
+function invalidData(name, gender, suggestedName) {
     if (name === "" && gender === undefined) {
         alert("Enter you name and select a gender, please!!");
         return true;
     }
     if (name === "") {
-        alert("Enter you name, please!!");
+        alert("Enter your name, please!!");
         return true;
     }
     if (gender === undefined) {
         alert("Select a gender, please!!");
+        return true;
+    }
+    if (suggestedName === "") {
+        alert("Enter your suggestion, please!!");
         return true;
     }
     return false;
