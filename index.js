@@ -16,7 +16,8 @@ function retrieveData() {
 
 function submitData() {
     var name = $("#name").val();
-    var gender = $("input[name='gender']:checked").val();
+    // var gender = $("input[name='gender']:checked").val();
+    var gender = 'Girl'; //voting ended, only option now is girl :)
     var suggestedName = $("#babyName").val();
     if (invalidData(name, gender)) {
         return;

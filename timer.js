@@ -32,8 +32,7 @@ var x = setInterval(function() {
     }
 }, 1000);
 
-function retrieveGender(babyGender) {
-    // var babyGender = "";
+function retrieveGender() {
     $.ajax({
         dataType: "json",
         type: "GET",

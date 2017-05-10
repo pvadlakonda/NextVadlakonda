@@ -86,15 +86,16 @@
 
     <div class="container-fluid bg-2 text-center">
 
-        <h3>Who do you think</h3>
+        <!--<h3>Who do you think</h3>-->
+        <h3>Voting has ended, but you can still suggest a name</h3>
         <form id="myForm">
             <div class="form-check form-check-inline" style="margin-top: 10px">
-                <label class="form-check-inline btn btn-outline-primary">
-                    <input class="form-check-input" type="radio" name="gender" value="Boy"> Little Brother
+                <!--<label class="form-check-inline btn btn-outline-primary">
+                    <input class="form-check-input" type="radio" name="gender" disabled value="Boy"> Little Brother
                     <!--<img style="width: 80px; height: 60px" src="wheels.png">-->
                 </label>
-                <label class="form-check-inline btn btn-outline-primary">
-                    <input class="form-check-input" type="radio" name="gender" value="Girl"> Little Sister
+                <!--<label class="form-check-inline btn btn-outline-primary">
+                    <input class="form-check-input" type="radio" name="gender" value="Girl" checked> Little Sister
                     <!--<img style="width: 80px; height: 60px" src="heels.png">-->
                 </label>
             </div>
