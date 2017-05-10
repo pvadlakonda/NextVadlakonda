@@ -92,12 +92,10 @@
             <div class="form-check form-check-inline" style="margin-top: 10px">
                 <!--<label class="form-check-inline btn btn-outline-primary">
                     <input class="form-check-input" type="radio" name="gender" disabled value="Boy"> Little Brother
-                    <!--<img style="width: 80px; height: 60px" src="wheels.png">-->
                 </label>
-                <!--<label class="form-check-inline btn btn-outline-primary">
+                <label class="form-check-inline btn btn-outline-primary">
                     <input class="form-check-input" type="radio" name="gender" value="Girl" checked> Little Sister
-                    <!--<img style="width: 80px; height: 60px" src="heels.png">-->
-                </label>
+                </label>-->
             </div>
             <div class="form-group">
                 <input type="text" class="form-check-input" id="name" placeholder="Your Name" name="name" style="width: 250px">
